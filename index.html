@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El universo de pesca de Rango: diario de campo, especies, retos y aventuras.">
+  <title>Rango — Diario de pesca</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="cabecera">
+    <a class="marca" href="#inicio" aria-label="Inicio">
+      <span class="marca-logo">R</span>
+      <span class="marca-texto">RANGO <small>DIARIO DE PESCA</small></span>
+    </a>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="#diario">El diario</a>
+      <a href="#especies">Las especies</a>
+      <a href="#progreso">Mi progreso</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#equipo">Equipamiento</a>
+    </nav>
+
+    <a class="boton boton-oscuro"
+       href="https://www.youtube.com/@Rangowild"
+       target="_blank" rel="noopener noreferrer">
+      Ver el canal
+    </a>
+  </header>
+
+  <main>
+    <section class="portada" id="inicio">
+      <div class="portada-texto">
+        <p class="sobretitulo">CUADERNO DE CAMPO · PESCA Y AVENTURA</p>
+
+        <h1>Cada captura<br>tiene una historia.</h1>
+
+        <p class="introduccion">
+          Un lugar para recorrer las aventuras de pesca de Rango,
+          descubrir las especies capturadas y seguir cada nuevo reto.
+        </p>
+
+        <div class="acciones">
+          <a class="boton boton-claro" href="#diario">Abrir el diario</a>
+          <a class="enlace" href="#especies">Explorar las especies →</a>
+        </div>
+      </div>
+
+      <div class="portada-ilustracion" aria-label="Ilustración decorativa de un sombrero de pesca">
+        <div class="sombrero">
+          <div class="copa"></div>
+          <div class="ala"></div>
+        </div>
+        <p class="nota-ilustracion">Historias de río, mar y muchas horas de pesca.</p>
+        <span class="etiqueta etiqueta-diario">El diario</span>
+        <span class="etiqueta etiqueta-especies">Las especies</span>
+        <span class="etiqueta etiqueta-aventuras">Las aventuras</span>
+      </div>
+    </section>
+
+    <section class="seccion" id="diario">
+      <div class="encabezado-seccion">
+        <p class="sobretitulo">PÁGINAS VIVIDAS</p>
+        <h2>El diario de campo</h2>
+        <p>Las salidas, las capturas y las historias que merecen quedarse en el cuaderno.</p>
+      </div>
+
+      <article class="tarjeta tarjeta-diario">
+        <div class="imagen-pendiente">
+          <span>FOTO REAL DEL CUADERNO</span>
+        </div>
+        <div class="tarjeta-contenido">
+          <p class="etiqueta-texto">CUADERNO DE BITÁCORA</p>
+          <h3>De las páginas de papel a la pantalla</h3>
+          <p>
+            Cada salida tendrá su propia ficha, con las notas del cuaderno,
+            el lugar, las especies y el vídeo correspondiente.
+          </p>
+          <a class="enlace" href="#diario">Próximamente: recorrer el diario →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="seccion seccion-verde" id="especies">
+      <div class="encabezado-seccion">
+        <p class="sobretitulo">RETO DE AGUA DULCE</p>
+        <h2>El catálogo de especies</h2>
+        <p>Un registro de las capturas confirmadas y de los peces que todavía quedan por encontrar.</p>
+      </div>
+
+      <div class="rejilla-tarjetas">
+        <article class="tarjeta-especie">
+          <span class="numero">01</span>
+          <h3>Especies capturadas</h3>
+          <p>Consulta las fichas de cada especie confirmada.</p>
+          <a href="#especies">Ver catálogo →</a>
+        </article>
+
+        <article class="tarjeta-especie">
+          <span class="numero">02</span>
+          <h3>Próximos objetivos</h3>
+          <p>Descubre qué especies quedan pendientes del reto.</p>
+          <a href="#progreso">Ver objetivos →</a>
+        </article>
+
+        <article class="tarjeta-especie">
+          <span class="numero">03</span>
+          <h3>Historias de captura</h3>
+          <p>Relaciona cada especie con las salidas y los vídeos.</p>
+          <a href="#diario">Explorar historias →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="seccion" id="progreso">
+      <div class="encabezado-seccion">
+        <p class="sobretitulo">TU PROPIO CUADERNO</p>
+        <h2>Mi progreso</h2>
+        <p>Una lista personal para marcar las especies que tú también hayas pescado.</p>
+      </div>
+      <div class="panel-pendiente">
+        <p>La lista personal y las estadísticas se añadirán en la siguiente fase.</p>
+      </div>
+    </section>
+
+    <section class="seccion seccion-agua" id="mapa">
+      <div class="encabezado-seccion">
+        <p class="sobretitulo">RÍOS, EMBALSES Y COSTAS</p>
+        <h2>El mapa de las aventuras</h2>
+        <p>Una futura guía de los lugares públicos que aparecen en las salidas de pesca.</p>
+      </div>
+      <div class="panel-pendiente">
+        <p>El mapa se incorporará cuando hayamos verificado las ubicaciones.</p>
+      </div>
+    </section>
+
+    <section class="seccion" id="equipo">
+      <div class="encabezado-seccion">
+        <p class="sobretitulo">MATERIAL DE PESCA</p>
+        <h2>El equipo de cada aventura</h2>
+        <p>Cañas, señuelos y otros materiales que aparezcan en los vídeos y podamos identificar.</p>
+      </div>
+      <div class="panel-pendiente">
+        <p>Las fichas de material se completarán con información comprobada en los vídeos.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <a class="marca" href="#inicio">
+      <span class="marca-logo">R</span>
+      <span class="marca-texto">RANGO <small>DIARIO DE PESCA</small></span>
+    </a>
+    <p>Un archivo de aventuras, capturas y páginas de campo.</p>
+    <a href="https://www.youtube.com/@Rangowild"
+       target="_blank" rel="noopener noreferrer">Canal de YouTube ↗</a>
+  </footer>
+</body>
+</html>
