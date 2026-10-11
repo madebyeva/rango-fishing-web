@@ -1,162 +1,306 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="El universo de pesca de Rango: diario de campo, especies, retos y aventuras.">
-  <title>Rango — Diario de pesca</title>
+  <meta name="theme-color" content="#3e5235">
+  <meta name="description" content="La bitácora de Rangowild: peces, aventuras, retos y jornadas de pesca.">
+  <title>Rangowild — Bitácora de pesca</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 
 <body>
-  <header class="cabecera">
-    <a class="marca" href="#inicio" aria-label="Inicio">
-      <span class="marca-logo">R</span>
-      <span class="marca-texto">RANGO <small>DIARIO DE PESCA</small></span>
+  <div class="top-strip">
+    <span>BITÁCORA OFICIAL DE RANGOWILD</span>
+    <span class="top-strip-right">AGUA · BARRO · PECES · PAMBRIOCH</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Rangowild, portada">
+      <span class="brand-mark" aria-hidden="true">
+        <span class="hat-crown"></span>
+        <span class="hat-brim"></span>
+      </span>
+      <span class="brand-text">
+        <strong>RANGOWILD</strong>
+        <small>CUADERNO DE CAMPO</small>
+      </span>
     </a>
 
-    <nav class="navegacion" aria-label="Navegación principal">
-      <a href="#diario">El diario</a>
-      <a href="#especies">Las especies</a>
-      <a href="#progreso">Mi progreso</a>
-      <a href="#mapa">Mapa</a>
-      <a href="#equipo">Equipamiento</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      Menú <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a class="active" aria-current="page" href="index.html">Portada</a>
+      <a href="diario.html">El diario</a>
+      <a href="especies.html">Los peces</a>
+      <a href="progreso.html">Mi lista</a>
+      <a href="mapa.html">Mapa y datos</a>
+      <a href="equipo.html">Equipamiento</a>
     </nav>
 
-    <a class="boton boton-oscuro"
-       href="https://www.youtube.com/@Rangowild"
-       target="_blank" rel="noopener noreferrer">
-      Ver el canal
-    </a>
+    <button class="sport-toggle" type="button" aria-pressed="false" id="sport-toggle">
+      <span class="sport-dot"></span>
+      MODO SPORT
+    </button>
   </header>
 
   <main>
-    <section class="portada" id="inicio">
-      <div class="portada-texto">
-        <p class="sobretitulo">CUADERNO DE CAMPO · PESCA Y AVENTURA</p>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-line"></span>
+          CUADERNO DE UN PESCADOR
+        </div>
 
-        <h1>Cada captura<br>tiene una historia.</h1>
+        <h1>NO HAY PEZ<br>QUE SE <span>RESISTA.</span></h1>
 
-        <p class="introduccion">
-          Un lugar para recorrer las aventuras de pesca de Rango,
-          descubrir las especies capturadas y seguir cada nuevo reto.
+        <p class="hero-description">
+          Ríos, embalses, jornadas eternas y alguna que otra ruca.
+          Aquí se apunta todo: lo que pica, lo que escapa y lo que
+          acaba siendo una historia.
         </p>
 
-        <div class="acciones">
-          <a class="boton boton-claro" href="#diario">Abrir el diario</a>
-          <a class="enlace" href="#especies">Explorar las especies →</a>
+        <div class="hero-actions">
+          <a class="button button-dark" href="diario.html">
+            ABRIR EL DIARIO <span aria-hidden="true">↗</span>
+          </a>
+          <a class="text-link" href="especies.html">Ver el reto de los peces →</a>
+        </div>
+
+        <div class="hero-note handwritten">
+          «Estoy cansado, jefe.»
+          <span>— probablemente después de 8 horas sin picada</span>
         </div>
       </div>
 
-      <div class="portada-ilustracion" aria-label="Ilustración decorativa de un sombrero de pesca">
-        <div class="sombrero">
-          <div class="copa"></div>
-          <div class="ala"></div>
+      <div class="hero-art" aria-label="Ilustración de un sombrero de pescador junto al agua">
+        <div class="sun-disc"></div>
+        <div class="hero-sticker sticker-top">NO PAIN<br>NO FISH</div>
+
+        <div class="illustration-water water-back"></div>
+        <div class="illustration-water water-front"></div>
+
+        <div class="hero-hat">
+          <div class="hat-top"></div>
+          <div class="hat-body"></div>
+          <div class="hat-band"></div>
+          <div class="hat-brim"></div>
         </div>
-        <p class="nota-ilustracion">Historias de río, mar y muchas horas de pesca.</p>
-        <span class="etiqueta etiqueta-diario">El diario</span>
-        <span class="etiqueta etiqueta-especies">Las especies</span>
-        <span class="etiqueta etiqueta-aventuras">Las aventuras</span>
-      </div>
-    </section>
 
-    <section class="seccion" id="diario">
-      <div class="encabezado-seccion">
-        <p class="sobretitulo">PÁGINAS VIVIDAS</p>
-        <h2>El diario de campo</h2>
-        <p>Las salidas, las capturas y las historias que merecen quedarse en el cuaderno.</p>
-      </div>
-
-      <article class="tarjeta tarjeta-diario">
-        <div class="imagen-pendiente">
-          <span>FOTO REAL DEL CUADERNO</span>
+        <div class="hero-fish" aria-hidden="true">
+          <svg viewBox="0 0 180 90" role="img">
+            <path d="M18 45 Q42 10 91 27 Q112 32 126 45 Q112 58 91 63 Q42 80 18 45Z" fill="currentColor"/>
+            <path d="M18 45 L0 20 L2 69Z" fill="currentColor"/>
+            <path d="M76 29 L89 7 L105 33Z" fill="currentColor"/>
+            <circle cx="109" cy="40" r="3.5" fill="#f4efe6"/>
+            <path d="M48 34 Q64 45 48 56" fill="none" stroke="#f4efe6" stroke-width="2"/>
+          </svg>
         </div>
-        <div class="tarjeta-contenido">
-          <p class="etiqueta-texto">CUADERNO DE BITÁCORA</p>
-          <h3>De las páginas de papel a la pantalla</h3>
-          <p>
-            Cada salida tendrá su propia ficha, con las notas del cuaderno,
-            el lugar, las especies y el vídeo correspondiente.
-          </p>
-          <a class="enlace" href="#diario">Próximamente: recorrer el diario →</a>
+
+        <div class="hero-sticker sticker-bottom handwritten">
+          SAN JEREMY<br>WADE, GUÍANOS
         </div>
-      </article>
-    </section>
 
-    <section class="seccion seccion-verde" id="especies">
-      <div class="encabezado-seccion">
-        <p class="sobretitulo">RETO DE AGUA DULCE</p>
-        <h2>El catálogo de especies</h2>
-        <p>Un registro de las capturas confirmadas y de los peces que todavía quedan por encontrar.</p>
+        <span class="art-caption">APUNTES DESDE LA ORILLA · EST. 2026</span>
       </div>
 
-      <div class="rejilla-tarjetas">
-        <article class="tarjeta-especie">
-          <span class="numero">01</span>
-          <h3>Especies capturadas</h3>
-          <p>Consulta las fichas de cada especie confirmada.</p>
-          <a href="#especies">Ver catálogo →</a>
-        </article>
-
-        <article class="tarjeta-especie">
-          <span class="numero">02</span>
-          <h3>Próximos objetivos</h3>
-          <p>Descubre qué especies quedan pendientes del reto.</p>
-          <a href="#progreso">Ver objetivos →</a>
-        </article>
-
-        <article class="tarjeta-especie">
-          <span class="numero">03</span>
-          <h3>Historias de captura</h3>
-          <p>Relaciona cada especie con las salidas y los vídeos.</p>
-          <a href="#diario">Explorar historias →</a>
-        </article>
+      <div class="hero-bottom-line">
+        <span>HECHO CON BARRO EN LAS BOTAS</span>
+        <span>LAT. 41° · LONG. LO QUE DIGA EL GPS</span>
       </div>
     </section>
 
-    <section class="seccion" id="progreso">
-      <div class="encabezado-seccion">
-        <p class="sobretitulo">TU PROPIO CUADERNO</p>
-        <h2>Mi progreso</h2>
-        <p>Una lista personal para marcar las especies que tú también hayas pescado.</p>
+    <section class="intro-band">
+      <p class="handwritten">No es solo pescar. Es tener una excusa para volver al río.</p>
+      <span>BITÁCORA Nº 001</span>
+    </section>
+
+    <section class="home-section field-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ÍNDICE DE LA BITÁCORA</p>
+          <h2>¿QUÉ BUSCAS, <span>PESCATORE?</span></h2>
+        </div>
+        <p class="section-aside handwritten">Pasa, mira y no pises la caña.</p>
       </div>
-      <div class="panel-pendiente">
-        <p>La lista personal y las estadísticas se añadirán en la siguiente fase.</p>
+
+      <div class="feature-grid">
+        <a class="feature-card feature-diary" href="diario.html">
+          <span class="card-number">01 / ARCHIVO</span>
+          <div class="mini-notebook" aria-hidden="true">
+            <div class="mini-page">
+              <span class="mini-page-title">Día de pesca</span>
+              <span class="mini-lines"></span>
+              <span class="mini-lines short"></span>
+              <span class="mini-lines"></span>
+              <span class="mini-stamp">ANOTADO</span>
+            </div>
+          </div>
+          <h3>EL DIARIO DE CAMPO</h3>
+          <p>Jornadas, capturas, anécdotas y notas de campo. Todo lo que merece quedar escrito.</p>
+          <span class="card-link">ENTRAR AL CUADERNO ↗</span>
+        </a>
+
+        <a class="feature-card feature-fish" href="especies.html">
+          <span class="card-number">02 / EL RETO</span>
+          <div class="fish-doodle" aria-hidden="true">
+            <svg viewBox="0 0 180 100">
+              <path d="M20 50 Q55 12 112 35 Q131 41 145 50 Q131 59 112 65 Q55 88 20 50Z" fill="currentColor"/>
+              <path d="M20 50 L1 23 L3 77Z" fill="currentColor"/>
+              <path d="M77 33 L92 9 L109 37Z" fill="currentColor"/>
+              <circle cx="124" cy="45" r="4" fill="#f4efe6"/>
+              <path d="M58 34 Q73 50 58 66" fill="none" stroke="#f4efe6" stroke-width="2"/>
+            </svg>
+            <span class="doodle-label handwritten">¿Y este cuál es?</span>
+          </div>
+          <h3>LOS PECES DE ESPAÑA</h3>
+          <p>El catálogo de especies del reto, con fichas para consultar qué se ha capturado y qué falta.</p>
+          <span class="card-link">VER LAS ESPECIES ↗</span>
+        </a>
+
+        <a class="feature-card feature-progress" href="progreso.html">
+          <span class="card-number">03 / MI PROGRESO</span>
+          <div class="checklist-art" aria-hidden="true">
+            <div class="check-row"><span>✓</span><i></i></div>
+            <div class="check-row"><span>✓</span><i></i></div>
+            <div class="check-row"><span>?</span><i></i></div>
+            <div class="check-row"><span>?</span><i></i></div>
+            <span class="check-scribble handwritten">¡Vamos!</span>
+          </div>
+          <h3>MI LISTA DE CAPTURAS</h3>
+          <p>Marca los peces que has pescado y lleva tu propia cuenta desde este navegador.</p>
+          <span class="card-link">MARCAR MIS PECES ↗</span>
+        </a>
+
+        <a class="feature-card feature-map" href="mapa.html">
+          <span class="card-number">04 / POR AHÍ</span>
+          <div class="map-art" aria-hidden="true">
+            <div class="map-river"></div>
+            <span class="map-pin pin-one">●</span>
+            <span class="map-pin pin-two">●</span>
+            <span class="map-pin pin-three">●</span>
+            <span class="map-label handwritten">¿Picará aquí?</span>
+          </div>
+          <h3>MAPA Y ESTADÍSTICAS</h3>
+          <p>Un espacio para registrar lugares de pesca, rutas y números de cada aventura.</p>
+          <span class="card-link">EXPLORAR EL MAPA ↗</span>
+        </a>
+
+        <a class="feature-card feature-gear" href="equipo.html">
+          <span class="card-number">05 / EL ARSENAL</span>
+          <div class="gear-art" aria-hidden="true">
+            <span class="gear-emoji">🎣</span>
+            <span class="gear-label handwritten">Rangocaña</span>
+            <span class="gear-emoji gear-boot">◉</span>
+            <span class="gear-label gear-label-two handwritten">Modo Sport</span>
+          </div>
+          <h3>EL EQUIPAMIENTO</h3>
+          <p>Las rangocañas, el salabre, los señuelos y todo lo que acaba en la mochila.</p>
+          <span class="card-link">ABRIR EL ARSENAL ↗</span>
+        </a>
+
+        <div class="feature-card feature-note">
+          <span class="card-number">06 / RECORDATORIO</span>
+          <div class="note-paper">
+            <p class="handwritten">Si no pica, cambia de sitio.</p>
+            <p class="handwritten">Si se engancha la ruca, paciencia.</p>
+            <p class="handwritten">Si hay pambrioch, hay esperanza.</p>
+            <span class="note-signature">— EL MANUAL DEL PESCATORE</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="seccion seccion-agua" id="mapa">
-      <div class="encabezado-seccion">
-        <p class="sobretitulo">RÍOS, EMBALSES Y COSTAS</p>
-        <h2>El mapa de las aventuras</h2>
-        <p>Una futura guía de los lugares públicos que aparecen en las salidas de pesca.</p>
+    <section class="quote-section">
+      <div class="quote-mark">“</div>
+      <p class="quote-text handwritten">
+        San Jeremy Wade, patrón de los pescadores, danos una picada
+        y líbranos de la ruca.
+      </p>
+      <span class="quote-caption">PLEGARIA OFICIAL DE LA ORILLA</span>
+      <div class="quote-scribble" aria-hidden="true">〰 〰 〰</div>
+    </section>
+
+    <section class="home-section notebook-preview">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PAPEL, TINTA Y AGUA</p>
+          <h2>LAS COSAS IMPORTANTES<br>SE APUNTAN <span>A MANO.</span></h2>
+        </div>
       </div>
-      <div class="panel-pendiente">
-        <p>El mapa se incorporará cuando hayamos verificado las ubicaciones.</p>
+
+      <div class="notebook-spread">
+        <div class="notebook-page notebook-left">
+          <span class="page-date handwritten">Fecha: cuando se pudo salir</span>
+          <h3 class="handwritten">Notas de la jornada</h3>
+          <p class="handwritten">Tiempo: depende de quién lo mire.</p>
+          <p class="handwritten">Cebo: el que no se ha quedado en casa.</p>
+          <p class="handwritten">Objetivo: volver con una historia.</p>
+          <div class="page-drawing">
+            <svg viewBox="0 0 180 90" aria-hidden="true">
+              <path d="M16 55 Q52 20 111 42 Q130 48 145 55 Q130 62 111 68 Q52 87 16 55Z" fill="currentColor"/>
+              <path d="M16 55 L1 31 L2 77Z" fill="currentColor"/>
+              <circle cx="124" cy="51" r="3" fill="#f4efe6"/>
+            </svg>
+            <span class="handwritten">Boceto de una posible captura</span>
+          </div>
+          <span class="page-number">01</span>
+        </div>
+
+        <div class="notebook-spine" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="notebook-page notebook-right">
+          <span class="page-date handwritten">Lista de cosas pendientes</span>
+          <h3 class="handwritten">Plan de ataque</h3>
+          <ul class="handwritten notebook-list">
+            <li>Preparar la rangochila.</li>
+            <li>Revisar el carrete.</li>
+            <li>Buscar un buen sitio.</li>
+            <li>No olvidar el bocata.</li>
+          </ul>
+          <div class="red-stamp">¡A PESCAR!</div>
+          <span class="page-number">02</span>
+        </div>
+      </div>
+
+      <p class="notebook-caption handwritten">
+        Así queremos que se sienta cada página del diario digital.
+      </p>
+
+      <div class="center-action">
+        <a class="button button-dark" href="diario.html">QUIERO VER EL DIARIO ↗</a>
       </div>
     </section>
 
-    <section class="seccion" id="equipo">
-      <div class="encabezado-seccion">
-        <p class="sobretitulo">MATERIAL DE PESCA</p>
-        <h2>El equipo de cada aventura</h2>
-        <p>Cañas, señuelos y otros materiales que aparezcan en los vídeos y podamos identificar.</p>
+    <section class="closing-banner">
+      <div>
+        <p class="eyebrow">UNA ÚLTIMA COSA</p>
+        <h2>SUELTA EL MÓVIL.<br><span>COGE LA CAÑA.</span></h2>
       </div>
-      <div class="panel-pendiente">
-        <p>Las fichas de material se completarán con información comprobada en los vídeos.</p>
+      <div class="closing-doodle handwritten">
+        ¡Y acuérdate<br>del pambrioch!
       </div>
     </section>
   </main>
 
-  <footer class="pie">
-    <a class="marca" href="#inicio">
-      <span class="marca-logo">R</span>
-      <span class="marca-texto">RANGO <small>DIARIO DE PESCA</small></span>
+  <footer class="site-footer">
+    <a class="footer-brand" href="index.html">RANGOWILD</a>
+    <p>Una bitácora de pesca hecha con barro, tinta y muchas ganas.</p>
+    <a href="https://www.youtube.com/@Rangowild" target="_blank" rel="noopener noreferrer">
+      VER EL CANAL DE YOUTUBE ↗
     </a>
-    <p>Un archivo de aventuras, capturas y páginas de campo.</p>
-    <a href="https://www.youtube.com/@Rangowild"
-       target="_blank" rel="noopener noreferrer">Canal de YouTube ↗</a>
+    <span class="footer-small">PROYECTO FAN · NO OFICIAL</span>
   </footer>
 </body>
 </html>
